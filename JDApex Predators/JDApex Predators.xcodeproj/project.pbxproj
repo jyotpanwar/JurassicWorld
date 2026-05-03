@@ -13,6 +13,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		80471E5B2FA7610000F1C316 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80C95FFC2DB919D90062250C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 80C960032DB919D90062250C;
+			remoteInfo = "JDApex Predators";
+		};
 		80C960152DB919DB0062250C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 80C95FFC2DB919D90062250C /* Project object */;
@@ -51,6 +58,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		80471E572FA7610000F1C316 /* JDApex_PredatorsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JDApex_PredatorsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		80C960042DB919D90062250C /* JDApex Predators.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JDApex Predators.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80C960142DB919DB0062250C /* JDApex PredatorsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "JDApex PredatorsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80C9601E2DB919DB0062250C /* JDApex PredatorsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "JDApex PredatorsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,6 +85,11 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		80471E582FA7610000F1C316 /* JDApex_PredatorsTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = JDApex_PredatorsTests;
+			sourceTree = "<group>";
+		};
 		80C9605C2DB91CA80062250C /* JDApex Predators */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
@@ -89,6 +102,13 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		80471E542FA7610000F1C316 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		80C960012DB919D90062250C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -118,6 +138,7 @@
 			children = (
 				80C960A62DC118030062250C /* Stickers.xcstickers */,
 				80C9605C2DB91CA80062250C /* JDApex Predators */,
+				80471E582FA7610000F1C316 /* JDApex_PredatorsTests */,
 				80C960052DB919D90062250C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -130,6 +151,7 @@
 				80C9601E2DB919DB0062250C /* JDApex PredatorsUITests.xctest */,
 				80C9609F2DC118030062250C /* ApexPredators.app */,
 				80C960A22DC118030062250C /* ApexPredators StickerPackExtension.appex */,
+				80471E572FA7610000F1C316 /* JDApex_PredatorsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -137,6 +159,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		80471E562FA7610000F1C316 /* JDApex_PredatorsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80471E5F2FA7610000F1C316 /* Build configuration list for PBXNativeTarget "JDApex_PredatorsTests" */;
+			buildPhases = (
+				80471E532FA7610000F1C316 /* Sources */,
+				80471E542FA7610000F1C316 /* Frameworks */,
+				80471E552FA7610000F1C316 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				80471E5C2FA7610000F1C316 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				80471E582FA7610000F1C316 /* JDApex_PredatorsTests */,
+			);
+			name = JDApex_PredatorsTests;
+			packageProductDependencies = (
+			);
+			productName = JDApex_PredatorsTests;
+			productReference = 80471E572FA7610000F1C316 /* JDApex_PredatorsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		80C960032DB919D90062250C /* JDApex Predators */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 80C960282DB919DB0062250C /* Build configuration list for PBXNativeTarget "JDApex Predators" */;
@@ -242,9 +287,13 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1620;
+				LastSwiftUpdateCheck = 2630;
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
+					80471E562FA7610000F1C316 = {
+						CreatedOnToolsVersion = 26.3;
+						TestTargetID = 80C960032DB919D90062250C;
+					};
 					80C960032DB919D90062250C = {
 						CreatedOnToolsVersion = 16.2;
 					};
@@ -283,11 +332,19 @@
 				80C9601D2DB919DB0062250C /* JDApex PredatorsUITests */,
 				80C9609E2DC118030062250C /* ApexPredators */,
 				80C960A12DC118030062250C /* ApexPredators StickerPackExtension */,
+				80471E562FA7610000F1C316 /* JDApex_PredatorsTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		80471E552FA7610000F1C316 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		80C960022DB919D90062250C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -328,6 +385,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		80471E532FA7610000F1C316 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		80C960002DB919D90062250C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -352,6 +416,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		80471E5C2FA7610000F1C316 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 80C960032DB919D90062250C /* JDApex Predators */;
+			targetProxy = 80471E5B2FA7610000F1C316 /* PBXContainerItemProxy */;
+		};
 		80C960162DB919DB0062250C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 80C960032DB919D90062250C /* JDApex Predators */;
@@ -370,6 +439,50 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		80471E5D2FA7610000F1C316 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8974N94N73;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jyotsna.JDApex-PredatorsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JDApex Predators.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/JDApex Predators";
+			};
+			name = Debug;
+		};
+		80471E5E2FA7610000F1C316 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8974N94N73;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jyotsna.JDApex-PredatorsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JDApex Predators.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/JDApex Predators";
+			};
+			name = Release;
+		};
 		80C960262DB919DB0062250C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -698,6 +811,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		80471E5F2FA7610000F1C316 /* Build configuration list for PBXNativeTarget "JDApex_PredatorsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80471E5D2FA7610000F1C316 /* Debug */,
+				80471E5E2FA7610000F1C316 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		80C95FFF2DB919D90062250C /* Build configuration list for PBXProject "JDApex Predators" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
