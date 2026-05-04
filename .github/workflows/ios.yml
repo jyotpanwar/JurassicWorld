@@ -33,7 +33,7 @@ jobs:
         run: |
           device=$(xcrun xctrace list devices 2>&1 | grep -oE 'iPhone.*?[^\(]+' | head -1 | sed 's/ Simulator$//')
 
-          xcodebuild test-without-building \
+          xcodebuild test \
             -scheme "$SCHEME" \
             -project "$PROJECT" \
             -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest'
