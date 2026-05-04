@@ -1,0 +1,41 @@
+name: "CodeQL"
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  analyze:
+    name: Analyze Swift
+    runs-on: macos-latest
+
+    permissions:
+      security-events: write
+      contents: read
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Select Xcode
+      run: sudo xcode-select -s /Applications/Xcode.app
+
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@v4
+      with:
+        languages: swift
+        build-mode: manual
+
+    # ✅ IMPORTANT: Build your project manually
+    - name: Build project
+      run: |
+        xcodebuild \
+          -project "JDApex Predators/JDApex Predators.xcodeproj" \
+          -scheme "JDApex Predators" \
+          -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest' \
+          clean build
+
+    - name: Perform CodeQL Analysis
+      uses: github/codeql-action/analyze@v4
