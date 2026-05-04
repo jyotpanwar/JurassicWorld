@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "009E6618-0FFA-4815-B681-C5C39131B152",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:JDApex Predators.xcodeproj",
+        "identifier" : "80471E562FA7610000F1C316",
+        "name" : "JDApex_PredatorsTests"
+      }
+    }
+  ],
+  "version" : 1
+}
