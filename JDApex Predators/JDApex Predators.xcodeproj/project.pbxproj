@@ -59,6 +59,7 @@
 
 /* Begin PBXFileReference section */
 		80471E572FA7610000F1C316 /* JDApex_PredatorsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JDApex_PredatorsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		80471E602FA87D8100F1C316 /* JDApex_Predators.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = JDApex_Predators.xctestplan; path = ../JDApex_Predators.xctestplan; sourceTree = "<group>"; };
 		80C960042DB919D90062250C /* JDApex Predators.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JDApex Predators.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80C960142DB919DB0062250C /* JDApex PredatorsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "JDApex PredatorsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80C9601E2DB919DB0062250C /* JDApex PredatorsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "JDApex PredatorsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +137,7 @@
 		80C95FFB2DB919D90062250C = {
 			isa = PBXGroup;
 			children = (
+				80471E602FA87D8100F1C316 /* JDApex_Predators.xctestplan */,
 				80C960A62DC118030062250C /* Stickers.xcstickers */,
 				80C9605C2DB91CA80062250C /* JDApex Predators */,
 				80471E582FA7610000F1C316 /* JDApex_PredatorsTests */,
