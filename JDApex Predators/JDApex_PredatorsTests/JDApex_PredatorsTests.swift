@@ -16,5 +16,4 @@ struct JDApex_PredatorsTests {
         assert(ts.iconName.elementsEqual("wind"))
         
     }
-
 }
