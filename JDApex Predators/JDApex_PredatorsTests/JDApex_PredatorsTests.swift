@@ -13,7 +13,7 @@ struct JDApex_PredatorsTests {
     @Test func testIconName() async throws {
        
         let ts = APType.air
-        assert(ts.iconName.elementsEqual("wind.fill"))
+        assert(ts.iconName.elementsEqual("wind"))
         
     }
 
