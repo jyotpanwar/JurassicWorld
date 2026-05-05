@@ -14,6 +14,5 @@ struct JDApex_PredatorsTests {
        
         let ts = APType.air
         assert(ts.iconName.elementsEqual("wind"))
-        
     }
 }
