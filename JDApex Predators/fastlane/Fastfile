@@ -30,6 +30,12 @@ platform :ios do
 #        app: "1:213075599779:ios:c14d5936975c9f63a2ba16",
 #        release_notes: "First by fastlane"
 #    )
-    
+
+
+    firebase_app_distribution(
+        app: ENV["FIREBASE_API_KEY"],
+        firebase_cli_token: ENV["FIREBASE_CLI_TOKEN"],
+        release_notes: "First by fastlane"
+    )
   end
 end
