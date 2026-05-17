@@ -21,11 +21,11 @@ platform :ios do
   lane :beta do
 
     increment_build_number(
-      xcodeproj: "JDApex Predators/JDApex Predators.xcodeproj"
+      xcodeproj: "JDApex Predators.xcodeproj"
     )
 
     build_number = get_build_number(
-      xcodeproj: "JDApex Predators/JDApex Predators.xcodeproj"
+      xcodeproj: "JDApex Predators.xcodeproj"
     )
 
     puts "Current build number: #{build_number}"
