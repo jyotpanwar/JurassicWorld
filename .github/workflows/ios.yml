@@ -16,6 +16,7 @@ jobs:
           PROJECT: "JDApex Predators/JDApex Predators.xcodeproj"
           PLATFORM: "iOS Simulator"
           FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY }}
+          FIREBASE_CLI_TOKEN: ${{ secrets.FIREBASE_CLI_TOKEN }}
 
     steps:
       - name: Checkout
