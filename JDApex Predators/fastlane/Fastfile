@@ -37,7 +37,7 @@ platform :ios do
     )
 
     firebase_app_distribution(
-        app: ENV["FIREBASE_API_KEY"],
+        app: "1:213075599779:ios:c14d5936975c9f63a2ba16",
         firebase_cli_token: ENV["FIREBASE_CLI_TOKEN"],
         ipa_path: ipa_path,
         release_notes: notes
