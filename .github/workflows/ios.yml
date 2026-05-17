@@ -26,9 +26,11 @@ jobs:
           ruby-version: '3.2'
           bundler-cache: true
 
+      - name: Install Fastlane
+        run: gem install fastlane
+         
       - name: Run Fastlane
-        run: bundle exec fastlane beta
-           
+        run: fastlane beta
            
 #      - name: Build
 #        run: |
