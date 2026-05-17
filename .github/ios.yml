@@ -1,0 +1,39 @@
+name: iOS starter workflow
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    name: Build and Test default scheme using any available iPhone simulator
+    runs-on: macos-latest
+
+    env:
+          SCHEME: "JDApex Predators"
+          PROJECT: "JDApex Predators/JDApex Predators.xcodeproj"
+          PLATFORM: "iOS Simulator"
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+          
+      - name: Build
+        run: |
+          device=$(xcrun xctrace list devices 2>&1 | grep -oE 'iPhone.*?[^\(]+' | head -1 | sed 's/ Simulator$//')
+
+          xcodebuild build-for-testing \
+            -scheme "$SCHEME" \
+            -project "$PROJECT" \
+           -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest'
+           
+      - name: Test
+        run: |
+          device=$(xcrun xctrace list devices 2>&1 | grep -oE 'iPhone.*?[^\(]+' | head -1 | sed 's/ Simulator$//')
+
+          xcodebuild test \
+            -scheme "$SCHEME" \
+            -project "$PROJECT" \
+            -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest'
