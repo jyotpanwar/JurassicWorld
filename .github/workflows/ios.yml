@@ -27,7 +27,6 @@ jobs:
           bundler-cache: true
 
       - name: Install Fastlane
-        working-directory: ./JDApex\ Predators  # ADD THIS LINE
         run: gem install fastlane
          
       - name: Run Fastlane
