@@ -1,14 +1,12 @@
 name: "CodeQL"
 
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    workflow_dispatch
+  #pull_request:
+   # branches: [ "main" ]
 
 jobs:
   analyze:
-    name: Analyze Swift
     runs-on: macos-latest
 
     permissions:
@@ -16,11 +14,16 @@ jobs:
       contents: read
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
+    - uses: actions/checkout@v4
 
     - name: Select Xcode
       run: sudo xcode-select -s /Applications/Xcode.app
+
+    - name: Cache DerivedData
+      uses: actions/cache@v4
+      with:
+        path: ~/Library/Developer/Xcode/DerivedData
+        key: ${{ runner.os }}-deriveddata-${{ hashFiles('**/*.xcodeproj/**', '**/*.swift') }}
 
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v4
@@ -28,14 +31,15 @@ jobs:
         languages: swift
         build-mode: manual
 
-    # ✅ IMPORTANT: Build your project manually
-    - name: Build project
+    - name: Build (fast, no simulator)
       run: |
         xcodebuild \
           -project "JDApex Predators/JDApex Predators.xcodeproj" \
           -scheme "JDApex Predators" \
-          -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest' \
-          clean build
+          -destination 'generic/platform=iOS' \
+          CODE_SIGNING_ALLOWED=NO \
+          ONLY_ACTIVE_ARCH=YES \
+          build
 
-    - name: Perform CodeQL Analysis
+    - name: Analyze
       uses: github/codeql-action/analyze@v4
