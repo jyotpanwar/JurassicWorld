@@ -27,10 +27,11 @@ jobs:
           bundler-cache: true
 
       - name: Install Fastlane
+        working-directory: "JDApex Predators"
         run: gem install fastlane
          
       - name: Run Fastlane
-        working-directory: ./JDApex\ Predators  # ADD THIS LINE
+        working-directory: "JDApex Predators"
         run: fastlane beta
            
 #      - name: Build
