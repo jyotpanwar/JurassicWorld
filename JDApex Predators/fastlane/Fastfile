@@ -21,7 +21,7 @@ platform :ios do
     
     increment_build_number
     
-    build_app(
+    ipa_path = build_app(
         scheme: "JDApex Predators",
         export_method: "development"
     )
@@ -35,7 +35,8 @@ platform :ios do
     firebase_app_distribution(
         app: ENV["FIREBASE_API_KEY"],
         firebase_cli_token: ENV["FIREBASE_CLI_TOKEN"],
-        release_notes: "First by fastlane"
+        ipa_path: ipa_path,
+        release_notes: changelog_from_git_commits
     )
   end
 end

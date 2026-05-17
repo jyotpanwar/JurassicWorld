@@ -19,6 +19,9 @@
 		8047201B2FB99FC300F1C316 /* Matchfile in Resources */ = {isa = PBXBuildFile; fileRef = 804720162FB99FC300F1C316 /* Matchfile */; };
 		8047201C2FB99FC300F1C316 /* Pluginfile in Resources */ = {isa = PBXBuildFile; fileRef = 804720172FB99FC300F1C316 /* Pluginfile */; };
 		8047201D2FB99FC300F1C316 /* Matchfile in Resources */ = {isa = PBXBuildFile; fileRef = 804720162FB99FC300F1C316 /* Matchfile */; };
+		8047205C2FB9D57C00F1C316 /* ios.yml in Resources */ = {isa = PBXBuildFile; fileRef = 8047205A2FB9D57C00F1C316 /* ios.yml */; };
+		8047205D2FB9D57C00F1C316 /* ios.yml in Resources */ = {isa = PBXBuildFile; fileRef = 8047205A2FB9D57C00F1C316 /* ios.yml */; };
+		8047205E2FB9D57C00F1C316 /* ios.yml in Resources */ = {isa = PBXBuildFile; fileRef = 8047205A2FB9D57C00F1C316 /* ios.yml */; };
 		80C960A32DC118030062250C /* ApexPredators StickerPackExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 80C960A22DC118030062250C /* ApexPredators StickerPackExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		80C960A72DC118030062250C /* Stickers.xcstickers in Resources */ = {isa = PBXBuildFile; fileRef = 80C960A62DC118030062250C /* Stickers.xcstickers */; };
 		80C960A82DC118030062250C /* Stickers.xcstickers in Resources */ = {isa = PBXBuildFile; fileRef = 80C960A62DC118030062250C /* Stickers.xcstickers */; };
@@ -63,6 +66,7 @@
 		80471FB92FB6F8A100F1C316 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		804720162FB99FC300F1C316 /* Matchfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Matchfile; sourceTree = "<group>"; };
 		804720172FB99FC300F1C316 /* Pluginfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Pluginfile; sourceTree = "<group>"; };
+		8047205A2FB9D57C00F1C316 /* ios.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = ios.yml; sourceTree = "<group>"; };
 		80C960042DB919D90062250C /* JDApex Predators.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JDApex Predators.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80C9609F2DC118030062250C /* ApexPredators.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ApexPredators.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80C960A22DC118030062250C /* ApexPredators StickerPackExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "ApexPredators StickerPackExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,9 +115,18 @@
 			path = fastlane;
 			sourceTree = "<group>";
 		};
+		8047205B2FB9D57C00F1C316 /* workflows */ = {
+			isa = PBXGroup;
+			children = (
+				8047205A2FB9D57C00F1C316 /* ios.yml */,
+			);
+			path = workflows;
+			sourceTree = "<group>";
+		};
 		80C95FFB2DB919D90062250C = {
 			isa = PBXGroup;
 			children = (
+				8047205B2FB9D57C00F1C316 /* workflows */,
 				80471FB92FB6F8A100F1C316 /* GoogleService-Info.plist */,
 				80471FB42FB6F73F00F1C316 /* fastlane */,
 				80471E602FA87D8100F1C316 /* JDApex_Predators.xctestplan */,
@@ -280,6 +293,7 @@
 			files = (
 				8047201C2FB99FC300F1C316 /* Pluginfile in Resources */,
 				8047201D2FB99FC300F1C316 /* Matchfile in Resources */,
+				8047205D2FB9D57C00F1C316 /* ios.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +307,7 @@
 				80471FBB2FB6F8A100F1C316 /* GoogleService-Info.plist in Resources */,
 				80471FB82FB6F73F00F1C316 /* Appfile in Resources */,
 				80C960A82DC118030062250C /* Stickers.xcstickers in Resources */,
+				8047205E2FB9D57C00F1C316 /* ios.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +321,7 @@
 				80471FBA2FB6F8A100F1C316 /* GoogleService-Info.plist in Resources */,
 				80471FB62FB6F73F00F1C316 /* Appfile in Resources */,
 				80C960A72DC118030062250C /* Stickers.xcstickers in Resources */,
+				8047205C2FB9D57C00F1C316 /* ios.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
