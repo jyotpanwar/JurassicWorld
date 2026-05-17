@@ -1,0 +1,6 @@
+app_identifier("com.jyotsna.JDApex-Predators") # The bundle identifier of your app
+apple_id("jyot_panwar@yahoo.com") # Your Apple Developer Portal username
+
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile
