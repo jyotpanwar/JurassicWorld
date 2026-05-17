@@ -16,31 +16,39 @@
 default_platform(:ios)
 
 platform :ios do
-  desc "Build beta builds and distribute to firebase using github actions"
+  desc "Build beta builds and distribute to firebase"
+
   lane :beta do
-    
-    increment_build_number
-    
-    ipa_path = build_app(
-        scheme: "JDApex Predators",
-        export_method: "development"
+
+    increment_build_number(
+      xcodeproj: "JDApex Predators/JDApex Predators.xcodeproj"
     )
-    
-#    firebase_app_distribution(
-#        app: "1:213075599779:ios:c14d5936975c9f63a2ba16",
-#        release_notes: "First by fastlane"
-#    )
+
+    build_number = get_build_number(
+      xcodeproj: "JDApex Predators/JDApex Predators.xcodeproj"
+    )
+
+    puts "Current build number: #{build_number}"
 
     notes = changelog_from_git_commits(
-        pretty: "- %s",
-        merge_commit_filtering: "exclude_merges"
+      pretty: "- %s",
+      merge_commit_filtering: "exclude_merges"
+    )
+
+    puts "Release notes:"
+    puts notes
+
+    ipa_path = build_app(
+      scheme: "JDApex Predators",
+      export_method: "development"
     )
 
     firebase_app_distribution(
-        app: "1:213075599779:ios:c14d5936975c9f63a2ba16",
-        firebase_cli_token: ENV["FIREBASE_CLI_TOKEN"],
-        ipa_path: ipa_path,
-        release_notes: notes
+      app: "1:213075599779:ios:c14d5936975c9f63a2ba16",
+      firebase_cli_token: ENV["FIREBASE_CLI_TOKEN"],
+      ipa_path: ipa_path,
+      release_notes: notes
     )
+
   end
 end
